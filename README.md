@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-  <img src="https://komarev.com/ghpvc/?username=https://github.com/ashishyadaw05&label=Profile%20Views&color=00f5ff&style=flat" />
+  <img src="https://komarev.com/ghpvc/?username=ashishyadaw05&label=Profile%20Views&color=00f5ff&style=flat" />
 </p>
 
 ---
@@ -92,26 +92,4 @@
 ---
 
 <h3 align="center">⚡ "Turning Data into Decisions."</h3>
-name: Generate Snake
 
-on:
-  schedule:
-    - cron: "0 */12 * * *"
-  workflow_dispatch:
-
-jobs:
-  generate:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: Platane/snk@v3
-        with:
-          github_user_name:ashishyadaw05
-          outputs: |
-            dist/github-contribution-grid-snake.svg
-
-      - uses: crazy-max/ghaction-github-pages@v3
-        with:
-          target_branch: output
-          build_dir: dist
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
