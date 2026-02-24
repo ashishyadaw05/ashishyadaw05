@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-  <img src="https://komarev.com/ghpvc/?username=YOUR_GITHUB_USERNAME&label=Profile%20Views&color=00f5ff&style=flat" />
+  <img src="https://komarev.com/ghpvc/?username=https://github.com/ashishyadaw05&label=Profile%20Views&color=00f5ff&style=flat" />
 </p>
 
 ---
@@ -60,8 +60,8 @@
 ## 📊 GitHub Stats
 
 <p align="center">
-  <img height="170" src="https://github-readme-stats.vercel.app/api?username=YOUR_GITHUB_USERNAME&theme=transparent&show_icons=true&hide_border=true&title_color=00F5FF&text_color=FFFFFF&icon_color=00F5FF" />
-  <img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=YOUR_GITHUB_USERNAME&layout=compact&theme=transparent&hide_border=true&title_color=00F5FF&text_color=FFFFFF" />
+  <img height="170" src="https://github-readme-stats.vercel.app/api?username=https://github.com/ashishyadaw05&theme=transparent&show_icons=true&hide_border=true&title_color=00F5FF&text_color=FFFFFF&icon_color=00F5FF" />
+  <img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=https://github.com/ashishyadaw05&layout=compact&theme=transparent&hide_border=true&title_color=00F5FF&text_color=FFFFFF" />
 </p>
 
 ---
@@ -69,7 +69,7 @@
 ## 🔥 Streak Stats
 
 <p align="center">
-  <img src="https://streak-stats.demolab.com?user=YOUR_GITHUB_USERNAME&theme=dark&hide_border=true&ring=00F5FF&fire=00F5FF&currStreakLabel=00F5FF" />
+  <img src="https://streak-stats.demolab.com?user=https://github.com/ashishyadaw05&theme=dark&hide_border=true&ring=00F5FF&fire=00F5FF&currStreakLabel=00F5FF" />
 </p>
 
 ---
@@ -77,7 +77,7 @@
 ## 🚀 Featured Projects
 
 - 🔍 **TruthLens – Deepfake Detection System**
-- 💳 **Online Payment Fraud Detection**
+- 💳 **Ai Based sign language translation**
 - 📈 **Sales Data Analysis Dashboard**
 - 🛒 **Market Basket Analysis (Apriori Algorithm)**
 
@@ -86,9 +86,32 @@
 ## 🐍 Contribution Snake
 
 <p align="center">
-  <img src="https://github.com/YOUR_GITHUB_USERNAME/YOUR_GITHUB_USERNAME/blob/output/github-contribution-grid-snake.svg" />
+  <img src="https://github.com/https://github.com/ashishyadaw05/https://github.com/ashishyadaw05/blob/output/github-contribution-grid-snake.svg" />
 </p>
 
 ---
 
 <h3 align="center">⚡ "Turning Data into Decisions."</h3>
+name: Generate Snake
+
+on:
+  schedule:
+    - cron: "0 */12 * * *"
+  workflow_dispatch:
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: Platane/snk@v3
+        with:
+          github_user_name:ashishyadaw05
+          outputs: |
+            dist/github-contribution-grid-snake.svg
+
+      - uses: crazy-max/ghaction-github-pages@v3
+        with:
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
